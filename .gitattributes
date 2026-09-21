@@ -1,0 +1,21 @@
+# Normalize line endings to LF in the repository and on checkout,
+# regardless of each contributor's local core.autocrlf setting.
+# Matches this project's Prettier config (LF) and avoids the CRLF/lint
+# churn fixed in context/foundation/health-check.md.
+* text=auto eol=lf
+
+# Binary files — never touch line endings.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+
+# Course-managed skill files (10x-cli sync tracks their content hashes) —
+# leave line endings exactly as delivered; do not normalize.
+.claude/** -text
+.agents/** -text
